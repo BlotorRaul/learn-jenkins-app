@@ -103,6 +103,9 @@ pipeline {
                             reuseNode true
                         }
                     }
+                    environment{
+                        CI_ENVIRONMENT_URL = 'https://cerulean-tartufo-9e07d1.netlify.app'
+                    }
                     steps{
                         sh '''
                             npx playwright test --reporter=html
